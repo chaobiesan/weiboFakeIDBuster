@@ -85,7 +85,6 @@ def process(uid_link,username,fake_user):
         return 0
     weibo_txt = head_weibo_result.group(1)
     fake_msg = re.search("漫.*游|国.*际|重新.*关注", weibo_txt)
-    pdb.set_trace()
     if fake_msg is not None:
         print(weibo_txt)
         send_alarm(username, fake_user, url)
